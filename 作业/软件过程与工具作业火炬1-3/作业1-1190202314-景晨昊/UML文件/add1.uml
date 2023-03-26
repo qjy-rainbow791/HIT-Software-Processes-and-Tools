@@ -1,0 +1,11 @@
+@startuml
+skinparam actorStyle awesome
+:User: -> (main):打开应用
+"主界面" as (main)
+"做题界面" as (zuoti)
+"评分界面" as (pinfen)
+note right of (pinfen) : 显示本次做题分数\n并根据分数显示评语
+(main) -> (zuoti):设置出题题数\n后点击\n我要做题
+(zuoti) --> (pinfen):输入答案\n并点击完成
+(pinfen) -> (main):回到主界面
+@enduml
